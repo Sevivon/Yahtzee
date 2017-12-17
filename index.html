@@ -5,8 +5,6 @@
 		<meta name="author" content="Sevivon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" />
-		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-		<script src="yahtzee.js"></script>
 		<title>Yahtzee</title>
 	</head>
 	<body>
@@ -19,6 +17,26 @@
 			<div class="row" role="presentation">
 				<div class="col" role="presentation">
 					<main id="app-yahtzee">
+						<div id="tableau">
+							<table>
+								<thead class="invisible">
+									<tr>
+										<th>Combinaison</th>
+										<th>Score</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr v-for="c in partieSuperieure" :id="c.id" :key="c.id">
+										<td>{{ c.nom }}</td>
+										<td>{{ c.valeur }}</td>
+									</tr>
+									<tr v-for="c in partieInferieure" :id="c.id" :key="c.id">
+										<td>{{ c.nom }}</td>
+										<td>{{ c.valeur }}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</main>
 				</div>
 			</div>
@@ -30,5 +48,7 @@
 				</div>
 			</div>
 		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="yahtzee.js"></script>
 	</body>
 </html>

@@ -154,6 +154,12 @@ var appYahtzee = new Vue
 					}
 				}
 			]
+		},
+		
+		computed:
+		{
+			partieSuperieure:function(){return this.combinaisons.slice(0,6);},
+			partieInferieure:function(){return this.combinaisons.slice(6);  }
 		}
 	}
 );
