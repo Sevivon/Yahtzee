@@ -20,20 +20,20 @@
 					<main id="app-yahtzee">
 						<div id="tableau">
 							<h2 class="sr-only">Feuille de marque</h2>
-							<table>
+							<table class="table table-bordered table-sm">
 								<thead class="sr-only">
 									<tr>
-										<th>Combinaison</th>
-										<th>Score</th>
+										<th scope="col">Combinaison</th>
+										<th scope="col">Score</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr v-for="c in partieSuperieure" :id="c.id" :key="c.id">
-										<td>{{ c.nom }}</td>
+										<th scope="row">{{ c.nom }}</th>
 										<td>{{ c.valeur }}</td>
 									</tr>
 									<tr v-for="c in partieInferieure" :id="c.id" :key="c.id">
-										<td>{{ c.nom }}</td>
+										<th scope="row">{{ c.nom }}</th>
 										<td>{{ c.valeur }}</td>
 									</tr>
 								</tbody>
