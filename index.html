@@ -9,6 +9,7 @@
 	</head>
 	<body>
 		<header>
+			<h1 class="sr-only">Yahtzee</h1>
 			<nav class="navbar navbar-dark bg-dark">
 				<a class="navbar-brand" href="#">Yahtzee</a>
 			</nav>
@@ -18,8 +19,9 @@
 				<div class="col" role="presentation">
 					<main id="app-yahtzee">
 						<div id="tableau">
+							<h2 class="sr-only">Feuille de marque</h2>
 							<table>
-								<thead class="invisible">
+								<thead class="sr-only">
 									<tr>
 										<th>Combinaison</th>
 										<th>Score</th>
@@ -36,6 +38,9 @@
 									</tr>
 								</tbody>
 							</table>
+						</div>
+						<div id="jet">
+							<h2 class="sr-only">Jet de dés</h2>
 						</div>
 					</main>
 				</div>
